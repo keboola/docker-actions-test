@@ -6,12 +6,16 @@ cfg = docker.Config()
 
 if (cfg.get_action() == 'test'):
     sys.stdout.write('test')
+    sys.exit(0)
 elif (cfg.get_action() == 'timeout'):
     time.sleep(60)
+    sys.exit(0)
 elif (cfg.get_action() == 'json'):
     sys.stdout.write('{"tables": ["a", "b", "c"]}')
+    sys.exit(0)
 elif (cfg.get_action() == 'invalidjson'):
     sys.stdout.write('{"tables": ["a", "b", "c"]')
+    sys.exit(0)
 elif (cfg.get_action() == 'noresponse'):
     sys.exit(0)
 elif (cfg.get_action() == 'usererror'):

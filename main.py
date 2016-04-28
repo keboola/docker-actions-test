@@ -21,10 +21,10 @@ elif (cfg.get_action() == 'usererror'):
 elif (cfg.get_action() == 'apperror'):
     print('application error')
     sys.exit(2)
-elif (cfg.get_action() == 'encrypt'):
+elif (cfg.get_action() == 'decrypt'):
     params = cfg.get_parameters()
     if (params.get('#password') == 'password'):
-        print('success')
+        print('{"password":"' + params.get('#password') + '"}')
     else:
         print('failed')
         sys.exit(1)

@@ -5,13 +5,10 @@ from keboola import docker
 cfg = docker.Config()
 
 if (cfg.get_action() == 'test'):
-    print('test')
+    print('{"test": "test"}')
     sys.exit(0)
 elif (cfg.get_action() == 'timeout'):
     time.sleep(60)
-    sys.exit(0)
-elif (cfg.get_action() == 'json'):
-    print('{"tables": ["a", "b", "c"]}')
     sys.exit(0)
 elif (cfg.get_action() == 'invalidjson'):
     print('{"tables": ["a", "b", "c"]')

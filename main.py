@@ -27,6 +27,7 @@ elif (cfg.get_action() == 'decrypt'):
         print('{"password":"' + params.get('#password') + '"}')
     else:
         print('failed')
+        print(params)
         sys.exit(1)
 else:
     print('undefined action' + cfg.get_action())

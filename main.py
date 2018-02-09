@@ -10,6 +10,12 @@ if cfg.get_action() == 'test':
 elif cfg.get_action() == 'timeout':
     time.sleep(60)
     sys.exit(0)
+elif cfg.get_action() == 'emptyjsonarray':
+    print('[]')
+    sys.exit(0)
+elif cfg.get_action() == 'emptyjsonobject':
+    print('{}')
+    sys.exit(0)
 elif cfg.get_action() == 'invalidjson':
     print('{"tables": ["a", "b", "c"]')
     sys.exit(0)
